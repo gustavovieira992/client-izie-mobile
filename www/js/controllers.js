@@ -42,6 +42,8 @@ angular.module('controllers', ['service'])
 
 .controller('formController', function ($scope, ionicDatePicker, ClientService, ionicToast, $state, $stateParams, $filter) {
   $scope.formData = {};
+  $scope.formData.address = {};
+  $scope.formData.arAddress = [];
 
 
   $scope.title = 'Novo cliente';
@@ -83,6 +85,42 @@ angular.module('controllers', ['service'])
         console.log(err);
         ionicToast.show(err.data.message, 'bottom', true, 2500);
       })
+  };
+
+  $scope.address = false;
+  $scope.addAddress = function () {
+    if (!$scope.formData.address.cep) {
+      ionicToast.show('Informe o CEP', 'bottom', true, 2500);
+      return false;
+    }
+
+    if (!$scope.formData.address.address) {
+      ionicToast.show('Informe o Endereço', 'bottom', true, 2500);
+      return false;
+    }
+
+    if (!$scope.formData.address.complement) {
+      ionicToast.show('Informe o Complemento', 'bottom', true, 2500);
+      return false;
+    }
+
+    if (!$scope.formData.address.number) {
+      ionicToast.show('Informe o Número', 'bottom', true, 2500);
+      return false;
+    }
+
+    if (!$scope.formData.address.city) {
+      ionicToast.show('Informe a Cidade', 'bottom', true, 2500);
+      return false;
+    }
+
+    if (!$scope.formData.address.state) {
+      ionicToast.show('Informe o Estado', 'bottom', true, 2500);
+      return false;
+    }
+
+    $scope.formData.arAddress.push($scope.formData.address);
+    $scope.formData.address = {};
   };
 
 

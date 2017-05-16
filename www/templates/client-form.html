@@ -34,6 +34,38 @@
       <label class="item item-input">
         <input type="text" placeholder="Email" ng-model="formData.email">
       </label>
+
+      <div class="item item-divider">
+        Endereços
+      </div>
+
+      <div class="item" ng-if="formData.arAddress" ng-repeat="item in formData.arAddress">
+        <p>{{item.cep}} - {{item.address}} - {{item.complement}} - {{item.number}} - {{item.city}} - {{item.state}}</p>
+      </div>
+
+      <label class="item item-input">
+        <input type="text" placeholder="CEP" ng-model="formData.address.cep" ui-mask="99.999-999" ui-mask-placeholder>
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Endereço" ng-model="formData.address.address">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Complemento" ng-model="formData.address.complement">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Número" ng-model="formData.address.number">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Cidade" ng-model="formData.address.city">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Estado" ng-model="formData.address.state">
+      </label>
+
+      <div class="item" ng-click="addAddress()">
+        <i class="icon ion-plus"></i> Adiconar endereço
+      </div>
+
     </div>
   </ion-content>
 </ion-view>
