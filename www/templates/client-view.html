@@ -17,6 +17,12 @@
       <div class="item">
         {{client.dt_birth}}
       </div>
+      <div class="item" ng-if="client.email">
+        {{client.email}}
+      </div>
+      <div class="item" ng-if="client.cpf">
+        {{client.cpf|cpf}}
+      </div>
     </div>
   </ion-content>
 </ion-view>

@@ -28,6 +28,12 @@
           <option value="f">Feminino</option>
         </select>
       </label>
+      <label class="item item-input">
+        <input type="text"  ng-model="formData.cpf" ui-mask="999.999.999-99" placeholder="CPF" ui-mask-placeholder>
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Email" ng-model="formData.email">
+      </label>
     </div>
   </ion-content>
 </ion-view>

@@ -6,7 +6,7 @@ angular.module('service', [])
   };
 
   var save = function (params) {
-    return $http.post(UrlsConst.baseUrl + '/api/v1/clients', params);
+    return $http.post(UrlsConst.baseUrl + '/api/v2/clients', params);
   };
 
   var find = function (id) {
