@@ -1,0 +1,27 @@
+<ion-view view-title="Clientes">
+  <ion-nav-buttons side="right">
+    <a class="button button-icon icon ion-plus" href="#/client/create">
+    </a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="centered-spinner" ng-if="loading">
+      <ion-spinner></ion-spinner>
+    </div>
+
+    <ion-list>
+      <ion-item class="item-remove-animate item-thumbnail-left item-icon-right" ng-repeat="item in list" type="item-text-wrap" href="#/client/view/{{item.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{item.name}}</h2>
+        <p ng-if="item.gender == 'm'">Masculino</p>
+        <p ng-if="item.gender == 'f'">Feminino</p>
+        <p>{{formatDate(item.dt_birth)}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-calm" ng-click="goEdit(item.id)">
+          <i class="icon ion-edit"></i>
+        </ion-option-button>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>

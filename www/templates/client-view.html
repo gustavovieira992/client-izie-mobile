@@ -1,0 +1,22 @@
+<ion-view view-title="Cliente">
+
+  <ion-content>
+    <div class="list">
+
+      <img src="http://placehold.it/350x150" class="center img-profile" alt="">
+
+      <div class="item">
+        {{client.name}}
+      </div>
+      <div class="item" ng-if="client.gender == 'm'">
+        Masculino
+      </div>
+      <div class="item" ng-if="client.gender == 'f'">
+        Feminino
+      </div>
+      <div class="item">
+        {{client.dt_birth}}
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

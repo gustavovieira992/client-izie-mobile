@@ -1,0 +1,33 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="save()">
+      Salvar
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="list">
+
+      <img src="http://placehold.it/350x150" class="center img-profile" alt="">
+      <button class="button button-positive button-small center margin-bottom10">
+        Adicionar foto
+      </button>
+
+      <label class="item item-input">
+        <input type="text" placeholder="Nome" ng-model="formData.name">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Data de nascimento" ng-focus="openDatePicker()" ng-model="formData.dt_birth_input">
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Sexo
+        </div>
+        <select ng-model="formData.gender">
+          <option value="m">Masculino</option>
+          <option value="f">Feminino</option>
+        </select>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>
