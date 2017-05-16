@@ -8,7 +8,7 @@
   <ion-content>
     <div class="list">
 
-      <img src="http://placehold.it/350x150" class="center img-profile" alt="">
+      <img src="../img/default_user.png" class="center img-profile" alt="">
       <button class="button button-positive button-small center margin-bottom10">
         Adicionar foto
       </button>
@@ -39,7 +39,7 @@
         Endereços
       </div>
 
-      <div class="item" ng-if="formData.arAddress" ng-repeat="item in formData.arAddress">
+      <div class="item item-text-wrap" ng-if="formData.arAddress" ng-repeat="item in formData.arAddress">
         <p>{{item.cep}} - {{item.address}} - {{item.complement}} - {{item.number}} - {{item.city}} - {{item.state}}</p>
       </div>
 
