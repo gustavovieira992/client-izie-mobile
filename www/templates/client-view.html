@@ -23,6 +23,15 @@
       <div class="item" ng-if="client.cpf">
         {{client.cpf|cpf}}
       </div>
+
+      <div class="item item-divider">
+        Endereços
+      </div>
+
+      <div class="item item-text-wrap" ng-if="client.arAddress.length" ng-repeat="item in client.arAddress">
+        <p>{{item.cep}} - {{item.address}} - {{item.complement}} - {{item.number}} - {{item.city}} - {{item.state}}</p>
+      </div>
+
     </div>
   </ion-content>
 </ion-view>

@@ -10,7 +10,7 @@ angular.module('service', [])
   };
 
   var find = function (id) {
-    return $http.get(UrlsConst.baseUrl + '/api/v1/client/' + id);
+    return $http.get(UrlsConst.baseUrl + '/api/v3/client/' + id);
   };
 
   return {
