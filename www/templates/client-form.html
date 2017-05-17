@@ -8,8 +8,9 @@
   <ion-content>
     <div class="list">
 
-      <img src="../img/default_user.png" class="center img-profile" alt="">
-      <button class="button button-positive button-small center margin-bottom10">
+      <img src="../img/default_user.png" class="center img-profile" alt="" ng-if="!image">
+      <img ng-src="{{pathForImage(image)}}" class="center img-profile" alt="" ng-if="image">
+      <button class="button button-positive button-small center margin-bottom10" ng-click="loadImage()">
         Adicionar foto
       </button>
 
