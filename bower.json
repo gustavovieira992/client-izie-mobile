@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "ionic-datepicker": "^1.2.1",
-    "ionic-toast": "^0.4.1"
+    "ionic-toast": "^0.4.1",
+    "ngCordova": "^0.1.27-alpha"
   }
 }
